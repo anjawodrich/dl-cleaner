@@ -12,10 +12,9 @@
     "outDir": "dist",
     "module": "nodenext",
     "target": "esnext",
-    "types": [],
     // For nodejs:
     // "lib": ["esnext"],
-    // "types": ["node"],
+    "types": ["node"],
 
     // Other Outputs
     "sourceMap": true,
@@ -35,7 +34,6 @@
     // "noPropertyAccessFromIndexSignature": true,
 
     // Recommended Options
-    "jsx": "react-jsx",
     "verbatimModuleSyntax": true,
     "isolatedModules": true,
     "noUncheckedSideEffectImports": true,

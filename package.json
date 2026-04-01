@@ -1,13 +1,17 @@
 {
-	"dependencies": {
-		"@effect/platform": "^0.96.0",
-		"@effect/platform-node": "^0.106.0",
-		"effect": "^3.21.0",
-		"ts-node": "^10.9.2"
-	},
-	"devDependencies": {
-		"@types/node": "^25.5.0",
-		"tsx": "^4.21.0",
-		"typescript": "^6.0.2"
-	}
+  "dependencies": {
+    "@effect/platform": "^0.96.0",
+    "@effect/platform-node": "^0.106.0",
+    "effect": "^3.21.0",
+    "ts-node": "^10.9.2"
+  },
+  "devDependencies": {
+    "@types/node": "^25.5.0",
+    "tsx": "^4.21.0",
+    "typescript": "^6.0.2"
+  },
+  "scripts": {
+    "start": "tsx src/main.ts"
+  },
+  "type": "module"
 }
