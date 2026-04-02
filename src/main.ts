@@ -3,6 +3,7 @@ import { Effect, Console } from "effect";
 import { FileSystem } from "@effect/platform";
 import { homedir } from "node:os";
 import path from "node:path";
+import trash from "trash";
 
 const program = Effect.gen(function* () {
   yield* Console.log("Download cleaner started...");
@@ -18,9 +19,9 @@ const program = Effect.gen(function* () {
   const filteredContent = content.filter((f) => f[0] !== ".");
 
   yield* Effect.forEach(filteredContent, (file) =>
-    Effect.gen(function* () {
-      yield* Console.log(file + " will be removed");
-      yield* fs.remove(path.join(dpath, file), { recursive: true });
+    Effect.promise(async () => {
+      Console.log(file + " will be removed");
+      await trash(path.join(dpath, file));
     }),
   );
 
